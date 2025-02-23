@@ -8,7 +8,7 @@ echoPin = 17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(triggerPin, GPIO.OUT)
 GPIO.setup(echoPin, GPIO.IN)
-ser = serial.Serial('/dev/ttys0', 9600, timeout=1)
+ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
 ser.flush()
 
 def get_distance():
