@@ -23,7 +23,7 @@ def get_distance():
     while GPIO.input(echoPin) == 1:
         stop_time = time.time()  
     elapsed_time = stop_time - start_time
-    distance = (elapsed_time * .0343) / 2 
+    distance = (elapsed_time * 3430) / 2 
     return round(distance, 2)
 
 def send_serial_stop( ):
