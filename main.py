@@ -33,6 +33,7 @@ def send_serial_stop( ):
     return None
 
 def main():
+    print("Here")
     try:
         while True:
             distance = get_distance()
@@ -45,3 +46,6 @@ def main():
         ser.close()
 
     return None
+
+if __name__=="__main__":
+    main()
