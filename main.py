@@ -28,7 +28,7 @@ def get_distance():
 
 def send_serial_stop( ):
     #ser.write(f"FB:100, LR:100, EN:0".encode('utf-8'))
-    #print(f"FB:100, LR:100, EN:0")
+    print(f"FB:100, LR:100, EN:0")
 
     return None
 
@@ -37,8 +37,8 @@ def main():
     try:
         while True:
             distance = get_distance()
-            print(distance)
-            if(distance<100):
+            #print(distance)
+            if(distance<5):
                 send_serial_stop()
             time.sleep(1) 
     except KeyboardInterrupt:
